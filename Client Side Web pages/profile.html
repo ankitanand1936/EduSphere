@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Profile | EduSphere</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>
+.profile-hero{position:relative;overflow:hidden;min-height:245px;padding:34px;border-radius:10px;background:radial-gradient(circle at 82% 15%,rgba(255,255,255,.14),transparent 24%),linear-gradient(135deg,#111317,#292d33 55%,#4b5057);color:#fff;box-shadow:0 12px 32px rgba(20,22,25,.16)}
+.profile-avatar-wrap{width:128px;height:128px;padding:4px;border-radius:50%;background:linear-gradient(135deg,#fff,#70757c);box-shadow:0 10px 30px rgba(0,0,0,.35);flex-shrink:0}
+.profile-avatar{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+.profile-name{font-size:27px;font-weight:800;margin:0}
+.profile-role{color:#c9ccd0;font-size:12px;margin-top:5px}
+.profile-badge{display:inline-block;margin-top:12px;padding:5px 10px;border-radius:20px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.14);font-size:9px}
+
+.profile-stat{text-align:center;padding:17px 10px}
+.profile-stat-number{font-size:22px;font-weight:800;color:#25282d}
+.profile-stat-label{display:block;margin-top:3px;color:#777c83;font-size:9px}
+.profile-section-title{font-size:14px;font-weight:800;margin-bottom:15px}
+.info-item{padding:11px 0;border-bottom:1px solid #e7e8ea}
+.info-item:last-child{border-bottom:0}
+.info-label{display:block;color:#858a91;font-size:9px;margin-bottom:3px}
+.info-value{color:#292c31;font-size:11px;font-weight:600}
+.course-mini{border:1px solid #e1e3e6;border-radius:7px;padding:11px;background:#fafafa}
+.course-mini-thumb{height:58px;border-radius:5px;background:linear-gradient(135deg,#181a1e,#4b5057);display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px}
+.achievement{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid #e7e8ea}
+.achievement:last-child{border-bottom:0}
+.achievement-icon{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#202328,#5c626a);color:#fff;font-weight:800;font-size:11px;flex-shrink:0}
+.achievement-title{font-size:11px;font-weight:700}
+.achievement-text{color:#80858c;font-size:9px;margin-top:2px}
+@media(max-width:767px){.profile-hero{padding:24px 20px 75px}.profile-avatar-wrap{width:100px;height:100px}.profile-name{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="site-top">EduSphere — Online Learning Platform</div>
+<nav class="navbar navbar-expand-md navbar-custom">
+<div class="container-fluid px-3 px-md-4">
+<a class="navbar-brand brand" href="../index.html"><span class="brand-dot"></span>EduSphere</a>
+<div class="navbar-nav mx-auto d-none d-md-flex">
+<a class="nav-link nav-link-custom" href="home.html">Home</a>
+<a class="nav-link nav-link-custom" href="course-catalog.html">Courses</a>
+<a class="nav-link nav-link-custom" href="student-dashboard.html">Dashboard</a>
+<a class="nav-link nav-link-custom" href="about.html">About</a>
+<a class="nav-link nav-link-custom" href="contact.html">Contact</a>
+</div>
+<a class="btn btn-primary-custom" href="login.html">Login</a>
+</div>
+</nav>
+
+<main class="page-wrap" data-profile data-student-only>
+<section class="profile-hero">
+<div class="d-flex align-items-center gap-4">
+<div class="profile-avatar-wrap"><img src="../profile-avatar.svg" class="profile-avatar" alt="Profile picture" data-avatar></div>
+<div>
+<h1 class="profile-name" data-user-name>Student Name</h1>
+<div class="profile-role">Student · EduSphere Learner</div>
+<span class="profile-badge">● Active Learner</span>
+<div class="mt-3 d-flex flex-wrap gap-2 align-items-center">
+<button type="button" class="btn btn-light btn-sm-custom" data-avatar-pick>Change photo</button>
+<button type="button" class="btn btn-outline-light btn-sm-custom" data-avatar-remove hidden>Remove</button>
+<input type="file" accept="image/png,image/jpeg,image/webp,image/gif" hidden data-avatar-input>
+</div>
+</div>
+</div>
+
+</section>
+
+<div class="card-clean mt-3"><div class="row g-0">
+<div class="col-6 col-md-3 border-end"><div class="profile-stat"><div class="profile-stat-number" data-p="enrolled">00</div><span class="profile-stat-label">Courses Enrolled</span></div></div>
+<div class="col-6 col-md-3 border-end"><div class="profile-stat"><div class="profile-stat-number" data-p="avg">0%</div><span class="profile-stat-label">Average Progress</span></div></div>
+<div class="col-6 col-md-3 border-end"><div class="profile-stat"><div class="profile-stat-number" data-p="lessons">00</div><span class="profile-stat-label">Lessons Completed</span></div></div>
+<div class="col-6 col-md-3"><div class="profile-stat"><div class="profile-stat-number" data-p="certs">00</div><span class="profile-stat-label">Certificates</span></div></div>
+</div></div>
+<div class="row g-3 mt-1">
+<div class="col-lg-5"><div class="card-clean p-4 h-100">
+<h2 class="profile-section-title">Personal Information</h2>
+<div class="info-item"><span class="info-label">Full Name</span><span class="info-value" data-user-name>Student Name</span></div>
+<div class="info-item"><span class="info-label">Email Address</span><span class="info-value" data-user-email>student@example.com</span></div>
+<div class="info-item"><span class="info-label">Phone Number</span><span class="info-value" data-p="phone">-</span></div>
+<div class="info-item"><span class="info-label">Member Since</span><span class="info-value" data-p="joined">-</span></div>
+</div></div>
+<div class="col-lg-7"><div class="card-clean p-4 h-100">
+<h2 class="profile-section-title">Learning Overview</h2>
+<div class="mb-3"><div class="d-flex justify-content-between mb-1"><span class="small">Overall Learning Progress</span><span class="small-muted" data-p="overall">0%</span></div><div class="progress" style="height:7px"><div class="progress-bar" data-bar="overall" style="width:0;background:#4a4f56"></div></div></div>
+<div class="mb-3"><div class="d-flex justify-content-between mb-1"><span class="small">Course Completion</span><span class="small-muted" data-p="completion">0%</span></div><div class="progress" style="height:7px"><div class="progress-bar" data-bar="completion" style="width:0;background:#666b72"></div></div></div>
+<div class="row g-2 mt-4">
+<div class="col-4"><div class="card-clean p-2 text-center"><strong style="font-size:15px" data-p="active">00</strong><div class="small-muted">In Progress</div></div></div>
+<div class="col-4"><div class="card-clean p-2 text-center"><strong style="font-size:15px" data-p="completed">00</strong><div class="small-muted">Completed</div></div></div>
+<div class="col-4"><div class="card-clean p-2 text-center"><strong style="font-size:15px" data-p="spent">$0.00</strong><div class="small-muted">Total Spent</div></div></div>
+</div></div></div>
+</div>
+<div class="row g-3 mt-1">
+<div class="col-lg-7"><div class="card-clean p-4">
+<div class="d-flex justify-content-between align-items-center mb-3"><h2 class="profile-section-title mb-0">Current Courses</h2><a href="student-dashboard.html" class="small-muted">Open Dashboard</a></div>
+<div class="row g-2" data-profile-courses></div>
+</div></div>
+<div class="col-lg-5"><div class="card-clean p-4">
+<h2 class="profile-section-title">Achievements</h2>
+<div data-achievements></div>
+</div></div>
+</div>
+</main>
+
+<footer class="edu-footer">
+<div class="container">
+<div class="row gy-4">
+<div class="col-md-5">
+<a href="../index.html" class="footer-brand"><span class="footer-brand-dot"></span>EduSphere</a>
+<p class="footer-description">Learn smarter. Build skills. Grow your future. EduSphere provides structured and practical learning experiences for students and lifelong learners.</p>
+</div>
+<div class="col-6 col-md-2">
+<h6 class="footer-title">Platform</h6>
+<a href="home.html">Home</a><a href="course-catalog.html">Courses</a><a href="about.html">About</a>
+</div>
+<div class="col-6 col-md-2">
+<h6 class="footer-title">Student</h6>
+<a href="student-dashboard.html">Dashboard</a><a href="profile.html">Profile</a><a href="login.html">Login</a>
+</div>
+<div class="col-6 col-md-3">
+<h6 class="footer-title">Support</h6>
+<a href="contact.html">Contact Us</a><a href="contact.html">Help & FAQ</a><a href="forgot-password.html">Account Help</a>
+</div>
+</div>
+<hr class="footer-divider">
+<div class="footer-bottom"><span>© 2026 EduSphere · All Rights Reserved</span><span>Learn · Grow · Succeed</span></div>
+</div>
+</footer>
+<script src="../app.js" defer></script>
+</body>
+</html>
